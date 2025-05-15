@@ -1,0 +1,15 @@
+<div class="card p-4">
+  <h2 class="text-xl font-semibold mb-2">View Product History</h2>
+  <input
+    type="number"
+    class="border p-2 w-full mb-2"
+    [(ngModel)]="productId"
+    placeholder="Product ID"
+  />
+  <button class="btn btn-primary mb-2" (click)="loadHistory()">Load History</button>
+
+  <ul *ngIf="history.length">
+    <li *ngFor="let event of history">{{ event }}</li>
+  </ul>
+  <p class="text-red-600" *ngIf="errorMsg">{{ errorMsg }}</p>
+</div>

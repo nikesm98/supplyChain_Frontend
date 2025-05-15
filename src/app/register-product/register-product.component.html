@@ -1,0 +1,10 @@
+<div class="card p-4 mb-4">
+  <h2 class="text-xl font-semibold mb-2">Register New Product</h2>
+  <input
+    class="border p-2 w-full mb-2"
+    [(ngModel)]="productName"
+    placeholder="Product Name"
+  />
+  <button class="btn btn-primary" (click)="register()">Register</button>
+  <p class="mt-2 text-sm text-green-700" *ngIf="feedBack">{{ feedBack }}</p>
+</div>
